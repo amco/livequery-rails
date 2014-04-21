@@ -2,8 +2,8 @@ module ActionDispatch
   module Assertions
     module SelectorAssertions
 
-      PATTERN_HTML = %Q{"((\\\\\"|[^\"])*)"}
-      PATTERN_UNICODE_ESCAPED_CHAR = /\\u([0-9a-zA-Z]{4})/
+      PATTERN_HTML = %Q{"((\\\\\"|[^\"])*)"} unless defined? PATTERN_HTML
+      PATTERN_UNICODE_ESCAPED_CHAR = /\\u([0-9a-zA-Z]{4})/ unless defined? PATTERN_UNICODE_ESCAPED_CHAR
 
       private
 
